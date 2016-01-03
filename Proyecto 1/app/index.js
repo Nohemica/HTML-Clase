@@ -1,8 +1,12 @@
+
 (function myBlog() {
+
+
   document.addEventListener("DOMContentLoaded", function(event) {
     var app = {
       DOMapi: domApiFunc(),
       DataApi: dataApiFunc(),
+      menumov: registerEventsFunc,
       addMenu: addMenuFunc,
       addSections: addSectionsFunc,
       sections: null,
@@ -16,6 +20,28 @@
     function init () {
       this.addMenu();
       this.addSections();
+      this.menumov();
+      this.addMenu();
+    }
+
+    function registerEventsFunc () {
+      var menuMobileBtn = document.querySelector("#menu-mobile-btn"),
+      menuMobileContainer = document.querySelector("#menu-mobile-container"),
+      bodyTag = document.getElementsByTagName('body')[0],
+      target = null;
+      menuMobileBtn.addEventListener("touchstart", function (event) {
+      target = event.target.localName === 'span' ? event.target.parentElement : event.target
+      if (target.classList.length === 0) {
+        bodyTag.classList.add('no-scroll');
+        menuMobileContainer.classList.add('open');
+        target.classList.add('open');
+      
+      }else {
+        bodyTag.classList.remove('no-scroll');
+        menuMobileContainer.classList.remove('open');
+        target.classList.remove('open');
+      };
+      }, false);
     }
 
     function addMenuFunc() {
@@ -36,7 +62,6 @@
         this.sections = object.data.sections;
         this.menu = object.data.menu;
         buildMenu.call(this);
-        //quiza en este punto pueda llamar addSections
       }
       this.DataApi.getData(addMenuToDOM.bind(this));
     }
@@ -92,6 +117,8 @@
       return publicAPI;
     };
 
+
+
     function dataApiFunc() {
       var URLs = {
         get: "app/sections.json",
@@ -114,5 +141,7 @@
       }
       return publicAPI;
     };
-  })
+       })
+
+
 })();

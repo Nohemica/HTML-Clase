@@ -2,35 +2,35 @@
 "data":{
 	"sections":[
 	{"id":1,
-	 "title":"terrific new",
+	 "title":"Noticia importante",
 	 "image":"http://pipsum.com/400x200.jsp",
 	 "article":"Nohemi cornejo"	
 	},
 	{"id":2,
-	 "title":"terrific new",
+	 "title":"Noticia importante",
 	 "image":"http://pipsum.com/400x200.jsp",
 	 "article":"Nohemi cornejo"	
 	},
 	{"id":3,
-	 "title":"terrific new",
+	 "title":"Noticia importante",
 	 "image":"http://pipsum.com/400x200.jsp",
 	 "article":"Nohemi cornejo"	
 	},
 	{"id":4,
-	 "title":"terrific new",
+	 "title":"Noticia importante",
 	 "image":"http://pipsum.com/400x200.jsp",
 	 "article":"Nohemi cornejo"	
 	},
 	{"id":5,
-	 "title":"terrific new",
+	 "title":"Noticia importante",
 	 "image":"http://pipsum.com/400x200.jsp",
 	 "article":"Nohemi cornejo"	
 	}
 	],
 	"menu":[
-	{"id":1,"title":"menu blog part"},
-	{"id":2,"title":"menu blog part"},
-	{"id":3,"title":"menu blog part"}
+	{"id":1,"title":"Parte"},
+	{"id":2,"title":"Parte"},
+	{"id":3,"title":"Parte"}
 	]
 	}
 }
