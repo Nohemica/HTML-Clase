@@ -21,7 +21,6 @@
       this.addMenu();
       this.addSections();
       this.menumov();
-      this.addMenu();
     }
 
     function registerEventsFunc () {
@@ -42,6 +41,7 @@
         target.classList.remove('open');
       };
       }, false);
+      this.addMenuFunc();
     }
 
     function addMenuFunc() {
